@@ -30,7 +30,7 @@ public class main {
                 break;
             }
             case 3:{
-                con.ConsoleOne ();
+                con.console();
                 break;
             }
             case 4:{
