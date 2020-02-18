@@ -33,7 +33,7 @@ public enum Month {
         this.inSeasons = inSeasons;
     }
 
-    private Month(int inDays,	String inSeasons) {
+    Month (int inDays ,String inSeasons) {
         this.inDays = inDays;
         this.inSeasons = inSeasons;
     }

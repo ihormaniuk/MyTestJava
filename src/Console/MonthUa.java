@@ -32,7 +32,7 @@ public enum MonthUa {
         this.inSeasons = inSeasons;
     }
 
-    private MonthUa(int inDays,	String inSeasons) {
+     MonthUa(int inDays,	String inSeasons) {
         this.inDays = inDays;
         this.inSeasons = inSeasons;
     }

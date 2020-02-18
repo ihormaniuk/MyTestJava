@@ -9,14 +9,14 @@ public class MonthUtilUa {
     public MonthUa readMonth() {
         while (true) {
             if (!(scanner.hasNextInt())) {
-                String s = scanner.nextLine().trim();
+                String s = scanner.nextLine().trim ();
                 for ( MonthUa monthUa : MonthUa.values()) {
                     if (s.equalsIgnoreCase(monthUa.name())) {
                         return monthUa;
                     }
                 }
                 System.out.println("Введене Слово не Вірне спробуйте ще раз");
-                scanner = new Scanner(System.in);
+//                scanner = new Scanner(System.in);
             } else {
                 int m = scanner.nextInt();
                 if (m > 12 || m < 1) {
