@@ -5,7 +5,7 @@ import java.util.Random;
 public class Car {
     Random random = new Random();
     int a = random.nextInt(50);
-    int b = random.nextInt(randomGenerator(1980,2018));
+    int b = random.nextInt();
     Auto auto = new Auto(a,b);
     Helm helm = new Helm(a,"Alcantara");
     Engine engine = new Engine(a);
@@ -18,12 +18,5 @@ public class Car {
                 "" + "Helm : " + helm + " / \n" +
                 "" + "Engine : " + engine + " / \n" +
                 "" + "Model Number  : " + numbermodel;
-    }
-    static int randomGenerator(int max ,int min){
-        if (min >= max) {
-            throw new IllegalArgumentException("Min value must be less than max value!");
-        }
-        Random random = new Random();
-        return random.nextInt(min - max +1)+min;
     }
 }

@@ -12,10 +12,10 @@ public class Coneirnere {
         ArrayList<Gerbil> gerbils = new ArrayList<Gerbil>();
         for (int i = 0;i < 4;i++){
             gerbils.add(new Gerbil(a));
-            print(gerbils.get(i).hop());
+            print(gerbils.get(i).hop(8));
         }
         for (Gerbil g: gerbils) {
-            print(g.hop());
+            print(g.hop(8));
         }
     }
 }
