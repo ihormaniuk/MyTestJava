@@ -10,6 +10,10 @@ public class testMassInteger {
 
         Scanner scanner = new Scanner(System.in);
 
+
+        Integer [] integers = {11,23,56,79,88,324,-1,233,44,11213,4,-33};
+        Arrays.sort(integers);
+        System.out.println(" " + Arrays.toString(integers));
 //        Integer i ;
 //        i = scanner.nextInt();
 //        i = i  = scanner.nextInt();
