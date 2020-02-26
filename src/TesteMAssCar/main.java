@@ -45,20 +45,8 @@ public class main {
             }
 
             case 2: {
-                Auto auto1[][] = new Auto[randomGeneret(1, 4)][randomGeneret(1, 4)];
 
-                for (int i = 0; i < auto.length; i++) {
-                    for (int j = 0; j < auto[i].length; j++) {
-                        auto[i][j] = new Auto(randomGeneret(100, 250),
-                                randomGeneret(1980, 2020),
-                                new Engine(randomGeneret(2, 12)),
-                                new Helm(randomGeneret(35,44),"Alcantara"));
-                    }
-
-                }
-                Arrays.fill(auto1,auto1.toString());
-
-//                Arrays.sort(auto, Collections.reverseOrder());
+//                Arrays.sort(new String[]{auto.toString()});
 //                Arrays.deepToString(auto);
 //                Arrays.sort(auto);
 //                print(Arrays.toString(auto));
@@ -74,7 +62,7 @@ public class main {
 //                String result4 = result3.replace(",", " ");
 ////                long id = Integer.parseInt(String.valueOf(result4));
 //                System.out.println(result4);
-                print(auto1);
+                print(auto.toString());
 
                 break;
             }
