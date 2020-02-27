@@ -1,6 +1,6 @@
 package TesteMAssCar;
 
-public class Auto {
+public class Auto implements Comparable<Auto> {
     private int numbersOfHorsePower;
     private int yearRelease;
     Helm helm ;
@@ -22,9 +22,30 @@ public class Auto {
         return yearRelease;
     }
 
-        public String toString(){
+    public String toString(){
         return "Numbers Of Horse Power : "  + numbersOfHorsePower + "\n" +
                 "" +  "Year Release : " + yearRelease + " Helm Diameter Whelm : " + helm.getDiameterWheels() + "\n" +
                 " Helm Material : " + helm.material + " Engine Number Of Cylinders : " + engine.getNumberOfCylinders();
+    }
+
+    public void setNumbersOfHorsePower(int numbersOfHorsePower) {
+        this.numbersOfHorsePower = numbersOfHorsePower;
+    }
+
+    public void setYearRelease(int yearRelease) {
+        this.yearRelease = yearRelease;
+    }
+
+    public void setHelm(Helm helm) {
+        this.helm = helm;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
+
+    public int compareTo(Auto cmpareAuto){
+        int compareQuantity = ((Auto) cmpareAuto).getNumbersOfHorsePower();
+        return numbersOfHorsePower;
     }
 }

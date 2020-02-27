@@ -1,19 +1,19 @@
 package TesteMAssCar;
 
-import ecel.ArrayListing.Apple;
 
 import java.util.*;
 
 import static PrintAndScanner.Print.print;
+//import static TesteMAssCar.autoCoperate.*;
 
-public class main {
+public class mainp {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         print("1 : Вивести toString() даних елементів масиву на консоль. ( deepToString() )");
         print("2 : відсортувати за спаданням всі обєкти за введеним полем ");
         print("3 : відсортувати за зростанням  всі обєкти за введеним полем ");
 
-        Auto auto[][] = new Auto[randomGeneret(1, 5)][randomGeneret(1, 5)];
+        Auto[][] auto = new Auto[randomGeneret(1, 5)][randomGeneret(1, 5)];
 
         for (int i = 0; i < auto.length; i++) {
             for (int j = 0; j < auto[i].length; j++) {
@@ -23,6 +23,10 @@ public class main {
                         new Helm(randomGeneret(35,44),"Alcantara"));
             }
         }
+//        Arrays.deepToString(auto);
+//        for(Auto[] a : auto){
+//            print(a.toString());
+//        }
 
         switch (scanner.nextInt()) {
 
@@ -45,8 +49,8 @@ public class main {
             }
 
             case 2: {
-
-//                Arrays.sort(new String[]{auto.toString()});
+                Arrays.fill(auto[][],randomGeneret(1,2));
+//                Arrays.sort(new String[]{Arrays.deepToString(auto)},Collections.reverseOrder());
 //                Arrays.deepToString(auto);
 //                Arrays.sort(auto);
 //                print(Arrays.toString(auto));
@@ -62,7 +66,8 @@ public class main {
 //                String result4 = result3.replace(",", " ");
 ////                long id = Integer.parseInt(String.valueOf(result4));
 //                System.out.println(result4);
-                print(auto.toString());
+                Arrays.sort(auto);
+                print(auto);
 
                 break;
             }
