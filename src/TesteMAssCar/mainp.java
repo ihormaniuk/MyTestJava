@@ -49,7 +49,8 @@ public class mainp {
             }
 
             case 2: {
-                Arrays.fill(auto[][],randomGeneret(1,2));
+                List<String> auto1 = new ArrayList<>();
+                auto1.add(Arrays.deepToString(auto));
 //                Arrays.sort(new String[]{Arrays.deepToString(auto)},Collections.reverseOrder());
 //                Arrays.deepToString(auto);
 //                Arrays.sort(auto);
@@ -66,8 +67,11 @@ public class mainp {
 //                String result4 = result3.replace(",", " ");
 ////                long id = Integer.parseInt(String.valueOf(result4));
 //                System.out.println(result4);
-                Arrays.sort(auto);
-                print(auto);
+//                for(int i = 0 ;i< auto1.size();i++){
+//                    print((auto1.get(i)).toString());
+//                }
+                Arrays.sort(new List[]{auto1},Collections.reverseOrder());
+                print(auto1);
 
                 break;
             }

@@ -48,4 +48,5 @@ public class Auto implements Comparable<Auto> {
         int compareQuantity = ((Auto) cmpareAuto).getNumbersOfHorsePower();
         return numbersOfHorsePower;
     }
+
 }
