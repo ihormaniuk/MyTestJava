@@ -12,7 +12,6 @@ public class mainp {
         print("1 : Вивести toString() даних елементів масиву на консоль. ( deepToString() )");
         print("2 : відсортувати за спаданням всі обєкти за введеним полем ");
         print("3 : відсортувати за зростанням  всі обєкти за введеним полем ");
-
         Auto[][] auto = new Auto[randomGeneret(1, 5)][randomGeneret(1, 5)];
 
         for (int i = 0; i < auto.length; i++) {
@@ -23,6 +22,16 @@ public class mainp {
                         new Helm(randomGeneret(35,44),"Alcantara"));
             }
         }
+        print(auto);
+
+//        for(int i = 0 ; i < auto.length;i++){
+//            Auto auto1 = new Auto();
+//            auto1.setEngine(new Engine(5));
+//            auto1.setHelm(new Helm(6,"A"));
+//            auto1.setNumbersOfHorsePower(7);
+//            auto1.setYearRelease(8);
+//            print(auto1.toString());
+//        }
 //        Arrays.deepToString(auto);
 //        for(Auto[] a : auto){
 //            print(a.toString());
@@ -45,12 +54,73 @@ public class mainp {
 
                 System.out.println(Arrays.deepToString(auto));
 
+                print("                \n" +
+                        "               \n" +
+                        "             \n" +
+                        "                            \n" +
+                        "                         \n" +
+                        "-----------------------------\n" +
+                        "                             \n" +
+                        "                               ");
+
                 break;
             }
 
             case 2: {
-                List<String> auto1 = new ArrayList<>();
-                auto1.add(Arrays.deepToString(auto));
+
+                ArrayList<Auto[][]> autos = new ArrayList<>();
+                autos.add(auto);
+                for(int i = 0; i < autos.size();i++){
+                    autos.add(auto);
+                    print(auto.toString());
+                }
+                for(int i = 0;i < auto.length;i++){
+                    for (int j = 0; j < auto[i].length; j++) {
+                        auto[i][j] = new Auto(randomGeneret(100, 250),
+                                randomGeneret(1980, 2020),
+                                new Engine(randomGeneret(2, 12)),
+                                new Helm(randomGeneret(35,44),"Alcantara"));
+                    }
+                }
+                print(auto);
+
+//                autos.get(0);
+//                print(autos);
+
+//                Arrays.sort(auto);
+//                int i = 0;
+//                for(Auto[] a : auto){
+//                    print(i++ + " : " + a);
+//                }
+//                Auto auto1 = new Auto();
+//                auto1.setEngine(new Engine(5));
+//                auto1.setHelm(new Helm(6,"A"));
+//                auto1.setNumbersOfHorsePower(7);
+//                auto1.setYearRelease(8);
+//
+//                for(int i = 0 ; i < auto.length;i++){
+//
+//                    print(auto1.toString());
+//                }
+
+//                Arrays.sort(new Auto[]{auto1});
+
+//                print("   ");
+//                print();
+
+
+//                Arrays.sort(auto);
+//                System.out.println(" " + Arrays.deepToString(auto));
+
+//                ArrayList<Auto[][]> auto1 = new ArrayList<>();
+//                auto1.add(testes());
+
+
+//                print(auto1.get(0));
+//                auto1.add(auto);
+//                auto1.size();
+//                print(auto1.size());
+//                auto1.add(Arrays.deepToString(auto));
 //                Arrays.sort(new String[]{Arrays.deepToString(auto)},Collections.reverseOrder());
 //                Arrays.deepToString(auto);
 //                Arrays.sort(auto);
@@ -70,8 +140,8 @@ public class mainp {
 //                for(int i = 0 ;i< auto1.size();i++){
 //                    print((auto1.get(i)).toString());
 //                }
-                Arrays.sort(new List[]{auto1},Collections.reverseOrder());
-                print(auto1);
+//                Arrays.sort(new List[]{auto1},Collections.reverseOrder());
+//                print(auto1);
 
                 break;
             }
@@ -93,6 +163,20 @@ public class mainp {
 //        }
 //        return sb.toString();
 //    }
+
+    static void testes(){
+        Auto[][] auto = new Auto[randomGeneret(1, 5)][randomGeneret(1, 5)];
+
+        for (int i = 0; i < auto.length; i++) {
+            for (int j = 0; j < auto[i].length; j++) {
+                auto[i][j] = new Auto(randomGeneret(100, 250),
+                        randomGeneret(1980, 2020),
+                        new Engine(randomGeneret(2, 12)),
+                        new Helm(randomGeneret(35,44),"Alcantara"));
+            }
+        }
+    }
+
     static int randomGeneret(int min, int max) {
 
         if (min >= max) {
