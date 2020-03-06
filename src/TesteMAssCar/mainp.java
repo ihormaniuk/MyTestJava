@@ -1,6 +1,7 @@
 package TesteMAssCar;
 
 
+
 import java.util.*;
 
 import static PrintAndScanner.Print.print;
@@ -10,170 +11,73 @@ public class mainp {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         print("1 : Вивести toString() даних елементів масиву на консоль. ( deepToString() )");
-        print("2 : відсортувати за спаданням всі обєкти за введеним полем ");
-        print("3 : відсортувати за зростанням  всі обєкти за введеним полем ");
-        Auto[][] auto = new Auto[randomGeneret(1, 5)][randomGeneret(1, 5)];
+        print("2 : Для всіх обєктів даного масиву засетати одне значення будьякого поля класу Авто (fill()) ");
+        print("3 : відсортувати за спаданням всі обєкти за введеним полем ");
+        print("4 : відсортувати за зростанням  всі обєкти за введеним полем ");
+
+//        Auto auto1 = new Auto(5);
+//        auto1.setNumbersOfHorsePower(5);
+
+
+        Auto[][] auto = new Auto[randomGeneret(1, 4)][randomGeneret(1, 4)];
+
 
         for (int i = 0; i < auto.length; i++) {
             for (int j = 0; j < auto[i].length; j++) {
-                auto[i][j] = new Auto(randomGeneret(100, 250),
+                auto[i][j] = new Auto(randomGeneret(150, 250),
                         randomGeneret(1980, 2020),
-                        new Engine(randomGeneret(2, 12)),
+                        new Engine(randomGeneret(2,6)),
                         new Helm(randomGeneret(35,44),"Alcantara"));
             }
         }
-        print(auto);
 
-//        for(int i = 0 ; i < auto.length;i++){
-//            Auto auto1 = new Auto();
-//            auto1.setEngine(new Engine(5));
-//            auto1.setHelm(new Helm(6,"A"));
-//            auto1.setNumbersOfHorsePower(7);
-//            auto1.setYearRelease(8);
-//            print(auto1.toString());
-//        }
-//        Arrays.deepToString(auto);
-//        for(Auto[] a : auto){
-//            print(a.toString());
-//        }
 
         switch (scanner.nextInt()) {
 
             case 1: {
-
-//                Auto autoArray[][] = new Auto[getRandomValueFromRange(1, 5)][getRandomValueFromRange(1, 5)];
-//
-//                for (int i = 0; i < autoArray.length; i++) {
-//                    for (int j = 0; j < autoArray[i].length; j++) {
-//                        autoArray[i][j] = new Auto(getRandomValueFromRange(100, 250),
-//                                                        getRandomValueFromRange(1980, 2018),
-//                                new Engine(getRandomValueFromRange(2, 12)),
-//                                new Helm(getRandomValueFromRange(35,44),"kks"));
-//                    }
-//                }
-
                 System.out.println(Arrays.deepToString(auto));
 
-                print("                \n" +
-                        "               \n" +
-                        "             \n" +
-                        "                            \n" +
-                        "                         \n" +
-                        "-----------------------------\n" +
-                        "                             \n" +
-                        "                               ");
 
-                break;
+                print("\n" +
+                        "------------------\n" +
+                        "      ");
+
+
+
+//                break;
             }
 
             case 2: {
 
-                ArrayList<Auto[][]> autos = new ArrayList<>();
-                autos.add(auto);
-                for(int i = 0; i < autos.size();i++){
-                    autos.add(auto);
-                    print(auto.toString());
+//                String s = String.valueOf(auto1.getNumbersOfHorsePower());
+
+                for(Auto[] autos : auto){
+                    Arrays.fill(autos,new Auto(10));
+//                    print(Arrays.deepToString(auto));
                 }
-                for(int i = 0;i < auto.length;i++){
-                    for (int j = 0; j < auto[i].length; j++) {
-                        auto[i][j] = new Auto(randomGeneret(100, 250),
-                                randomGeneret(1980, 2020),
-                                new Engine(randomGeneret(2, 12)),
-                                new Helm(randomGeneret(35,44),"Alcantara"));
-                    }
+
+                print("\n" +
+                        "---------\n" +
+                        "");
+//                break;
+            }
+
+            case 3:{
+                for (Auto[] m : auto){
+                    Arrays.sort(m);
+                    print(Arrays.deepToString(m));
                 }
-                print(auto);
+            }
 
-//                autos.get(0);
-//                print(autos);
+            case 4:{
 
-//                Arrays.sort(auto);
-//                int i = 0;
-//                for(Auto[] a : auto){
-//                    print(i++ + " : " + a);
-//                }
-//                Auto auto1 = new Auto();
-//                auto1.setEngine(new Engine(5));
-//                auto1.setHelm(new Helm(6,"A"));
-//                auto1.setNumbersOfHorsePower(7);
-//                auto1.setYearRelease(8);
-//
-//                for(int i = 0 ; i < auto.length;i++){
-//
-//                    print(auto1.toString());
-//                }
-
-//                Arrays.sort(new Auto[]{auto1});
-
-//                print("   ");
-//                print();
-
-
-//                Arrays.sort(auto);
-//                System.out.println(" " + Arrays.deepToString(auto));
-
-//                ArrayList<Auto[][]> auto1 = new ArrayList<>();
-//                auto1.add(testes());
-
-
-//                print(auto1.get(0));
-//                auto1.add(auto);
-//                auto1.size();
-//                print(auto1.size());
-//                auto1.add(Arrays.deepToString(auto));
-//                Arrays.sort(new String[]{Arrays.deepToString(auto)},Collections.reverseOrder());
-//                Arrays.deepToString(auto);
-//                Arrays.sort(auto);
-//                print(Arrays.toString(auto));
-//                Arrays.toString(auto);
-//                String a =  Arrays.deepToString(auto);
-//                delNoDigOrLet(a);
-//                String result = a.replaceAll("[a-zA-Zа-яА-Я-:]* "+"", "");
-//                String [] tho;
-//                String b = " " ;
-//                tho = result.split ( a );
-//                String result2 = result.replace("]", "");
-//                String result3 = result2.replace("[", "");
-//                String result4 = result3.replace(",", " ");
-////                long id = Integer.parseInt(String.valueOf(result4));
-//                System.out.println(result4);
-//                for(int i = 0 ;i< auto1.size();i++){
-//                    print((auto1.get(i)).toString());
-//                }
-//                Arrays.sort(new List[]{auto1},Collections.reverseOrder());
-//                print(auto1);
-
-                break;
             }
 
             default: {
-                System.out.println("Введённое число должно быть 1 или 2!");
-
+                print();
                 break;
             }
 
-        }
-    }
-
-//    private static String delNoDigOrLet (String s) {
-//        StringBuilder sb = new StringBuilder();
-//        for (int i = 0; i < s.length(); i++) {
-//            if (Character .isLetterOrDigit(s.charAt(i)))
-//                sb.append(s.charAt(i));
-//        }
-//        return sb.toString();
-//    }
-
-    static void testes(){
-        Auto[][] auto = new Auto[randomGeneret(1, 5)][randomGeneret(1, 5)];
-
-        for (int i = 0; i < auto.length; i++) {
-            for (int j = 0; j < auto[i].length; j++) {
-                auto[i][j] = new Auto(randomGeneret(100, 250),
-                        randomGeneret(1980, 2020),
-                        new Engine(randomGeneret(2, 12)),
-                        new Helm(randomGeneret(35,44),"Alcantara"));
-            }
         }
     }
 

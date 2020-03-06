@@ -37,6 +37,7 @@ public class LessonRobotMain {
         System.out.println ( "-----------------------------------------" );
         System.out.println ( "↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓" );
         System.out.println ();
+
         LessonRobot[] robots = {robot,coffeRobot,robotDancer,robotCoocker};
         for ( LessonRobot lessonRobot : robots ) {
             System.out.println ("ID : " + id++ + " " + lessonRobot );

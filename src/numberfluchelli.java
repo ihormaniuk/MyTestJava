@@ -1,7 +1,9 @@
+import static PrintAndScanner.Print.print;
+
 public class numberfluchelli {
     public static void main(String[] args){
-        for ( int i = 0;i < 100;i+=1 ){
-                System.out.println ( i ++ );
-        }
+        int i = 150000;
+        byte b = (byte) i;
+        print("i = " + i + " i = byte : "  + b);
     }
 }
