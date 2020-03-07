@@ -10,10 +10,19 @@ public class testMassInteger {
 
         Scanner scanner = new Scanner(System.in);
 
+        Random random =new Random();
+        int i = random.nextInt(2)+1;
 
-        Integer [] integers = {11,23,56,79,88,324,-1,233,44,11213,4,-33};
-        Arrays.sort(integers);
-        System.out.println(" " + Arrays.toString(integers));
+        for(int ia = 1;i>=10;ia++){
+            print(i);
+        }
+
+        print(i);
+
+
+//        Integer [] integers = {11,23,56,79,88,324,-1,233,44,11213,4,-33};
+//        Arrays.sort(integers);
+//        System.out.println(" " + Arrays.toString(integers));
 //        Integer i ;
 //        i = scanner.nextInt();
 //        i = i  = scanner.nextInt();
@@ -22,8 +31,8 @@ public class testMassInteger {
 
 
 
-        int [] number = {1,3,2,5,4,7,6,9,0,10,35,77,44,65,11,34,566,78,88,90,33,22};
-        int a = number[0];
+//        int [] number = {1,3,2,5,4,7,6,9,0,10,35,77,44,65,11,34,566,78,88,90,33,22};
+//        int a = number[0];
 
 //        for ( int i = 0 ; i < number.length ; i++ ) {
 //            if ( number[i] >= a ) {

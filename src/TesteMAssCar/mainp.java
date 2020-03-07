@@ -10,6 +10,10 @@ import static PrintAndScanner.Print.print;
 public class mainp {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
+        print(" Створити двовимірний масив, величина якого вираховується рандомно. \n" +
+                "Заповнити даний масив обєктами авто, всі значення конструктора якого заповнюються рандомно ? \n" +
+                " Так ?\n" +
+                " Ні ?");
         print("1 : Вивести toString() даних елементів масиву на консоль. ( deepToString() )");
         print("2 : Для всіх обєктів даного масиву засетати одне значення будьякого поля класу Авто (fill()) ");
         print("3 : відсортувати за спаданням всі обєкти за введеним полем ");
@@ -44,20 +48,17 @@ public class mainp {
 
 
 
-//                break;
+                break;
             }
 
             case 2: {
-
-//                String s = String.valueOf(auto1.getNumbersOfHorsePower());
-
                 for(Auto[] autos : auto){
-                    Arrays.fill(autos,new Auto(10));
-//                    print(Arrays.deepToString(auto));
+                    Arrays.fill(autos,new Auto(10,6, new Engine(15), new Helm(5,"4")));
+                    print(Arrays.deepToString(autos));
                 }
 
                 print("\n" +
-                        "---------\n" +
+                        "------\n" +
                         "");
 //                break;
             }
