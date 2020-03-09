@@ -23,7 +23,7 @@ public class mainp {
 //        auto1.setNumbersOfHorsePower(5);
 
 
-        Auto[][] auto = new Auto[randomGeneret(1, 4)][randomGeneret(1, 4)];
+        Auto[][] auto = new Auto[randomGeneret(1, 3)][randomGeneret(1, 3)];
 
 
         for (int i = 0; i < auto.length; i++) {
@@ -48,14 +48,14 @@ public class mainp {
 
 
 
-                break;
+//                break;
             }
 
             case 2: {
-                for(Auto[] autos : auto){
-                    Arrays.fill(autos,new Auto(10,6, new Engine(15), new Helm(5,"4")));
-                    print(Arrays.deepToString(autos));
-                }
+//                for(Auto[] autos : auto){
+//                    Arrays.fill(autos,new Auto(randomGeneret(1,9),randomGeneret(2,6), new Engine(15), new Helm(5,"4")));
+//                    print(Arrays.deepToString(autos));
+//                }
 
                 print("\n" +
                         "------\n" +
@@ -67,11 +67,18 @@ public class mainp {
                 for (Auto[] m : auto){
                     Arrays.sort(m);
                     print(Arrays.deepToString(m));
+                    print("---------");
                 }
+                print(" " +
+                        "-----------\n" +
+                        "         ");
             }
 
             case 4:{
-
+                for (Auto[] a : auto){
+                    Arrays.sort(a,Comparator.reverseOrder());
+                    print(Arrays.deepToString(a));
+                }
             }
 
             default: {
