@@ -34,12 +34,24 @@ public class mainp {
                         new Helm(randomGeneret(35,44),"Alcantara"));
             }
         }
+        List<Auto[][]> list = new ArrayList<>(auto.length);
+//        for (int i = 0;i<list.size();i++){
+//            for (int j = 0; j < auto[i].length; j++) {
+//                list.get(i)[j] = list.add(auto);
+//            }
+//        }
+//        List<Auto[][]> list = new ArrayList<>();
+        for(int i = 0;i<auto.length;i++){
+            list.add(auto   );
+//            print(Arrays.deepToString(auto));
+        }
+        print(Arrays.deepToString(new List[]{list}));
 
 
         switch (scanner.nextInt()) {
 
             case 1: {
-                System.out.println(Arrays.deepToString(auto));
+//                System.out.println(Arrays.deepToString(auto));
 
 
                 print("\n" +
@@ -64,21 +76,21 @@ public class mainp {
             }
 
             case 3:{
-                for (Auto[] m : auto){
-                    Arrays.sort(m);
-                    print(Arrays.deepToString(m));
-                    print("---------");
-                }
+//                for (Auto[] m : auto){
+//                    Arrays.sort(m);
+//                    print(Arrays.deepToString(m));
+//                    print("---------");
+//                }
                 print(" " +
                         "-----------\n" +
                         "         ");
             }
 
             case 4:{
-                for (Auto[] a : auto){
-                    Arrays.sort(a,Comparator.reverseOrder());
-                    print(Arrays.deepToString(a));
-                }
+//                for (Auto[] a : auto){
+//                    Arrays.sort(a,Comparator.reverseOrder());
+//                    print(Arrays.deepToString(a));
+//                }
             }
 
             default: {
