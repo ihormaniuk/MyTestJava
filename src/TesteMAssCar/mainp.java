@@ -51,7 +51,7 @@ public class mainp {
         switch (scanner.nextInt()) {
 
             case 1: {
-//                System.out.println(Arrays.deepToString(auto));
+                System.out.println(Arrays.deepToString(auto));
 
 
                 print("\n" +
@@ -76,21 +76,21 @@ public class mainp {
             }
 
             case 3:{
-//                for (Auto[] m : auto){
-//                    Arrays.sort(m);
-//                    print(Arrays.deepToString(m));
-//                    print("---------");
-//                }
+                for (Auto[] m : auto){
+                    Arrays.sort(m);
+                    print(Arrays.deepToString(m));
+                    print("---------");
+                }
                 print(" " +
                         "-----------\n" +
                         "         ");
             }
 
             case 4:{
-//                for (Auto[] a : auto){
-//                    Arrays.sort(a,Comparator.reverseOrder());
-//                    print(Arrays.deepToString(a));
-//                }
+                for (Auto[] a : auto){
+                    Arrays.sort(a,Comparator.reverseOrder());
+                    print(Arrays.deepToString(a));
+                }
             }
 
             default: {

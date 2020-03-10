@@ -71,29 +71,38 @@ public class Auto implements Comparable<Auto> { //implements Comparable <Auto>
     }
 
 
-
     @Override
-    public int compareTo(Auto auto){
-        if(this.numbersOfHorsePower == auto.getNumbersOfHorsePower()){
-            return 0;
-        }
-        else if(this.numbersOfHorsePower < auto.getNumbersOfHorsePower()){
-            return -1;
-        }
-        else if(this.numbersOfHorsePower > auto.getNumbersOfHorsePower()){
-            return 1;
-        }
-        else if(this.yearRelease > auto.getYearRelease()){
-            return 1;
-        }
-        else if(this.yearRelease < auto.getYearRelease()){
-            return -1;
-        }
-        else if(this.yearRelease == auto.getYearRelease()){
-            return 0;
-        }else {
-            return 1;
-        }
-
+    public int compareTo(Auto auto) {
+        return compare(this.numbersOfHorsePower, auto.numbersOfHorsePower);
     }
+    public static int compare(int x, int y) {
+        return (x < y) ? -1 : ((x == y) ? 0 : 1);
+    }
+
+
+
+//    @Override
+//    public int compareTo(Auto auto){
+//        if(this.numbersOfHorsePower == auto.getNumbersOfHorsePower()){
+//            return 0;
+//        }
+//        else if(this.numbersOfHorsePower < auto.getNumbersOfHorsePower()){
+//            return -1;
+//        }
+//        else if(this.numbersOfHorsePower > auto.getNumbersOfHorsePower()){
+//            return 1;
+//        }
+//        else if(this.yearRelease > auto.getYearRelease()){
+//            return 1;
+//        }
+//        else if(this.yearRelease < auto.getYearRelease()){
+//            return -1;
+//        }
+//        else if(this.yearRelease == auto.getYearRelease()){
+//            return 0;
+//        }else {
+//            return 1;
+//        }
+//
+//    }
 }
