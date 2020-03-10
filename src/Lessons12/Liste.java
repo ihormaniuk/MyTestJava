@@ -19,6 +19,8 @@ public class Liste {
         print(list);
         list.sort(Integer::compareTo);
         print(list);
+
+        print(list.contains(15));
     }
 
 }
