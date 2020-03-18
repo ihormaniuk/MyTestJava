@@ -1,39 +1,31 @@
 package Console;
 
 public enum MonthUa {
-    Січень(31,"Зима"),
-    Лютий(28,"Зима"),
-    Березень(31,"Весна"),
-    Квітень(30,"Весна"),
-    Травень(31,"Весна"),
-    Червень(30,"Літо"),
-    Липень(31,"Літо"),
-    Серпень(31,"Літо"),
-    Вересень(30,"Осінь"),
-    Жовтень(31,"Осінь"),
-    Листопад(30,"Осінь"),
-    Грудень(31,"Зима");
+    Січень(31,Seasons.Зима),
+    Лютий(28,Seasons.Зима),
+    Березень(31,Seasons.Весна),
+    Квітень(30,Seasons.Весна),
+    Травень(31,Seasons.Весна),
+    Червень(30,Seasons.Літо),
+    Липень(31,Seasons.Літо),
+    Серпень(31,Seasons.Літо),
+    Вересень(30,Seasons.Осінь),
+    Жовтень(31,Seasons.Осінь),
+    Листопад(30,Seasons.Осінь),
+    Грудень(31,Seasons.Зима);
 
-    int inDays;
-    String inSeasons;
-    public int getInDays() {
-        return inDays;
+    int days;
+    Seasons seasons;
+    public int getDays() {
+        return days;
     }
 
-    public void setInDays(int inDays) {
-        this.inDays = inDays;
+    public Seasons getSeasons() {
+        return seasons;
     }
 
-    public String getInSeasons() {
-        return inSeasons;
-    }
-
-    public void setInSeasons(String inSeasons) {
-        this.inSeasons = inSeasons;
-    }
-
-     MonthUa(int inDays,	String inSeasons) {
-        this.inDays = inDays;
-        this.inSeasons = inSeasons;
+     MonthUa(int days,Seasons seasons) {
+        this.days = days;
+        this.seasons = seasons;
     }
 }

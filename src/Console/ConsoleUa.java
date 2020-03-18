@@ -6,7 +6,7 @@ public class ConsoleUa {
     // method 3
     public void printAllMonthsThatHaveTheSameNumberofDays(int specifiedNumber){
         for (MonthUa m : MonthUa.values()){
-            if (m.inDays == specifiedNumber){
+            if (m.days == specifiedNumber){
                 System.out.println(m.toString());
             }
         }
@@ -17,7 +17,7 @@ public class ConsoleUa {
 
         String s = null;
         for (MonthUa m : MonthUa.values()){
-            if (m.inDays < specifiedNumber){
+            if (m.days < specifiedNumber){
                 System.out.println(m.toString());
                 s=m.toString();
             }
@@ -33,7 +33,7 @@ public class ConsoleUa {
         String s = null;
 
         for (MonthUa m : MonthUa.values()){
-            if (m.inDays > specifiedNumber){
+            if (m.days > specifiedNumber){
                 System.out.println(m.toString());
                 s=m.toString();
 
@@ -111,8 +111,8 @@ public class ConsoleUa {
         for (MonthUa d : MonthUa.values()){
 
 
-            if (d.inDays%2==0){
-                System.out.println(d.name()+ " День = "+ d.inDays);
+            if (d.days%2==0){
+                System.out.println(d.name()+ " День = "+ d.days);
             }
 
         }
@@ -124,8 +124,8 @@ public class ConsoleUa {
         for (MonthUa d : MonthUa.values()){
 
 
-            if (d.inDays%2==1){
-                System.out.println(d.name()+ " День  = "+ d.inDays);
+            if (d.days%2==1){
+                System.out.println(d.name()+ " День  = "+ d.days);
             }
 
         }
@@ -217,7 +217,7 @@ public class ConsoleUa {
                         System.out.println("   3 - Вивести всі місяці які мають таку саму кількість днів");
                         System.out.println("******************************************************************");
                         System.out.println("         ******** Ведіть Місяць ********");
-                        consoleUa.printAllMonthsThatHaveTheSameNumberofDays (monthUa.readMonth().inDays);
+                        consoleUa.printAllMonthsThatHaveTheSameNumberofDays (monthUa.readMonth().days);
 
                         System.out.println("        ********  Наступний Крок? ******** ");
                         break;
@@ -227,7 +227,7 @@ public class ConsoleUa {
                         System.out.println("    4 - Вивести на екран всі місяці які мають меншу кількість днів");
                         System.out.println("*****************************************************");
                         System.out.println("        ******** Ведіть Місяць ******** ");
-                        consoleUa.showDisplayallMonthsthatHaveFewerDays (monthUa.readMonth().inDays);
+                        consoleUa.showDisplayallMonthsthatHaveFewerDays (monthUa.readMonth().days);
 
                         System.out.println("         ********  Наступний Крок? ******** ");
                         break;
@@ -237,7 +237,7 @@ public class ConsoleUa {
                         System.out.println("  5 - Вивести на екран всі місяці які мають більшу кількість днів ");
                         System.out.println("*****************************************************");
                         System.out.println("        ******** Ведіть Місяць ******** ");
-                        consoleUa.showonDisplayallMonthsThatHaveMoreGreatDays (monthUa.readMonth().inDays);
+                        consoleUa.showonDisplayallMonthsThatHaveMoreGreatDays (monthUa.readMonth().days);
 
                         System.out.println("        ********  Наступний Крок? ******** ");
                         break;

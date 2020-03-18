@@ -16,7 +16,7 @@ public class mainT {
     public static void main(String [] args){
         for ( MonthUa m : MonthUa.values () ){
             String s = readLine ();
-            if(s.equalsIgnoreCase (m.getInSeasons ())){
+            if(s.equalsIgnoreCase (m.getSeasons ().toString())){
                 print (s);
                 break;
             }

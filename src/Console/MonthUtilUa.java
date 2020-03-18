@@ -83,7 +83,7 @@ public class MonthUtilUa {
 
     //method 10
     public void evenNumberOfDays (MonthUa monthUa) {
-        if (monthUa.inDays % 2 == 0) {
+        if (monthUa.days % 2 == 0) {
             System.out.println(monthUa.name() + " має парну кількість днів.");
         } else {
             System.out.println(monthUa.name() + " має непарну кількість днів.");
