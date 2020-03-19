@@ -44,8 +44,6 @@ public class mainArr {
                 print(autos.toString());
             }
         }
-
-
     }
     static int randomGeneret(int min, int max) {
 

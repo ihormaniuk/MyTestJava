@@ -1,40 +1,41 @@
 import Console.MonthUa;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 import static PrintAndScanner.Print.print;
 
 public class mainarrays {
     public static void main(String[] args){
-        Scanner scan = new Scanner(System.in);
-        List<MonthUa> monthUaList = new ArrayList<>();
-        for(MonthUa monthUa : MonthUa.values()){
-            monthUaList.add(monthUa);
-        }
-        String s = scan.next();
 
-        for (MonthUa months2 : monthUaList) {
-            if (months2.name().equalsIgnoreCase(s)){
-                print(months2.getSeasons() + "" +months2.name());
-                if(months2.getSeasons().toString().equalsIgnoreCase(months2.name())){
-                    print(months2.name() );
-                }
+
+
+
+        Random random = new Random();
+        int randome = random.nextInt(990)+10;
+
+        List<Integer> list = new ArrayList<>();
+
+        for(int i = 0;i<40;i++){
+            list.add(randome + i++);
+        }
+        print(list.toString());
+
+        for(int i = list.size() -1 ; i>=0;i--){
+            if(i % 2 == 0){
+                list.remove(i);
             }
         }
-
-
-//        for(MonthUa m : MonthUa.values()){
-////            m.getSeasons();
-//            print(m.getSeasons());
-//        }
-//        print(monthUaList.toString());
-
-//        for (MonthUa months2 : monthUaList) {
-//            if (months2.getSeasons().toString().equalsIgnoreCase(s)) {
-//                System.out.println(months2);
-//            }
-//        }
+        print(list);
+        boolean remove = true;
+        Iterator<Integer> it = list.iterator();
+        while (it.hasNext()){
+            it.next();
+            if(remove){
+                it.remove();
+            }
+            remove = !remove;
+        }
+        print(list);
     }
+
 }
