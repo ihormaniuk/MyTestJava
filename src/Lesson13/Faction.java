@@ -35,11 +35,14 @@ public class Faction {
         int weight = scanner.nextInt();
         print("Ведіть ріст депутата");
         int height = scanner.nextInt();
-        print("Депутат бере хабар ?");
+        print("Депутат бере хабар ? (true/false)");
         boolean bribery = scanner.nextBoolean();
         Deputy deputy = new Deputy(surname,name,age,bribery,weight,height);
-        deputy.toBribe(bribery);
+        if (deputy.isBribery()) {
+            deputy.toBribe();
+        }
         deputyList.add(deputy);
+        System.out.println("Депутат : \n" + deputy.toString() + " Добавлений до Фракції");
     }
     public void removeDeputy(){
         print("Ведіть фамілію депутата ");
@@ -79,9 +82,9 @@ public class Faction {
         }
 
         if (deputyIndex >= 0) {
-            System.out.println("Самый большой взяточник фракции " + deputyList.get(deputyIndex).toString());
+            System.out.println("Самий Великий хабарник :" + deputyList.get(deputyIndex).toString());
         } else {
-            System.out.println("В данной партии взяточников нет!");
+            System.out.println("У фракції немає хабарників !");
         }
     }
     public void allDeputiesFraction(){
@@ -92,5 +95,9 @@ public class Faction {
     public void removeAllFractionDeputies(){
         deputyList.clear();
         print("Всі депутати Видалені ");
+    }
+    @Override
+    public String toString() {
+        return "Фракція \"" + getNameFaction() + "\"";
     }
 }

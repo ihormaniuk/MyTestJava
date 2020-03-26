@@ -1,6 +1,6 @@
 package Lesson13;
 
-public class Human {
+public abstract class Human {
     private int weight;
     private int height;
 

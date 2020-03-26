@@ -70,18 +70,36 @@ public class Deputy extends Human implements Comparable <Deputy> {
         }
     }
 
-    public void toBribe(boolean bribery){
-        Scanner scanner = new Scanner(System.in);
-        int size = scanner.nextInt();
-        if(bribery=false){
-            print("Цей депутат не бере хабарів");
-        }else if(size<=5000){
-            print("Цей депутат взяв хабара на суму : " + size);
-            size = bribeSize;
-        }else if(size>=5000){
-            print("Миліція увязнить депутата");
+    public void toBribe() {
+        if (this.bribery == false) {
+            System.out.println("Цей депутат не бере хабарів");
+        }
+
+        if (this.bribery == true) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println(" Ведіть суму хабара ");
+            int bribeAmount = scanner.nextInt();
+
+            if (bribeAmount > 5000) {
+                System.out.println("Миліція увязнить депутата");
+            } else {
+                this.bribeSize = bribeAmount;
+            }
         }
     }
+
+//    public void toBribe(){
+//        Scanner scanner = new Scanner(System.in);
+//        int size = scanner.nextInt();
+//        if(bribery=false){
+//            print("Цей депутат не бере хабарів");
+//        }else if(size<=5000){
+//            print("Цей депутат взяв хабара на суму : " + size);
+//            size = bribeSize;
+//        }else if(size>=5000){
+//            print("Миліція увязнить депутата");
+//        }
+//    }
 
     public String toString(){
         return " Фамілія : " + surname + "," + " Імя : " + name + "\n" +
